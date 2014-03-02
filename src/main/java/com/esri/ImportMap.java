@@ -95,7 +95,7 @@ final class ImportMap extends Mapper<LongWritable, Text, DateHour, Text>
                 {
                     final Date utcDate = m_origDateFormat.parse(tokens[6]);
                     m_calendar.setTimeInMillis(utcDate.getTime());
-                    tokens[7] = m_destDateFormat.format(utcDate);
+                    tokens[6] = m_destDateFormat.format(utcDate);
 
                     final long voyageId = Long.parseLong(tokens[8]);
                     final Long draught = m_voyageId2Draught.get(voyageId);
